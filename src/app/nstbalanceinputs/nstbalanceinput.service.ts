@@ -25,7 +25,7 @@ const httpOptions = {
 })
 export class NstbalanceinputService {
 
-  private  API_URL = environment.apiUrl;
+  // private  API_URL = environment.apiUrl;
   private baseUrl = `api/nstbalanceinputs`; // environment.baseUrl;
 
   private handleError: HandleError;
@@ -41,7 +41,7 @@ export class NstbalanceinputService {
   getBalances(): Observable<INstbalanceinput[]> {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-     const url = `${this.API_URL}/nstbalanceinputs`;
+     const url = `${this.baseUrl}`;
     return this.http.get<INstbalanceinput[]>(url, {responseType: 'json'}).pipe(
  //     of(new HttpResponse({status:200, body:body})),
  map(this.extractData),
@@ -63,7 +63,6 @@ export class NstbalanceinputService {
       );
   }
 
-
   getBalance(id: string): Observable<INstbalanceinput | undefined> {
 
     return this.getBalances().pipe(
@@ -76,6 +75,19 @@ export class NstbalanceinputService {
     );
 
   }
+
+  /* GET heroes whose name contains search term */
+  searchBalanceinputs(term: string): Observable<INstbalanceinput[]> {
+    if (!term.trim()) {
+      // if not search term, return empty hero array.
+      return of([]);
+    }
+    return this.http.get<INstbalanceinput[]>(`${this.baseUrl}/?IntitulCompte=${term}`).pipe(
+      tap(_ => this.log(`found heroes matching "${term}"`)),
+      catchError(this.handleError<INstbalanceinput[]>('searchHeroes', []))
+    );
+  }
+
 
   deleteBalance(balance: INstbalanceinput | string): Observable<INstbalanceinput> {
      const headers = new HttpHeaders();

@@ -9,8 +9,7 @@ import { NstbalanceinputFilterPipe } from './nstbalanceinput-filter.pipe';
 
 
 // Imports for loading & configuring the in-memory web api
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import {BalanceData} from '../mock-data/nstbalanceinputdata';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { NstbalanceinputService } from './nstbalanceinput.service';
 import { NstbalanceinputResolverService } from './nstbalanceinput-resolver.service';
@@ -24,7 +23,7 @@ import { NstbalanceinputSearchComponent } from './nstbalanceinput-search/nstbala
   imports: [
     SharedModule,
     ReactiveFormsModule,
-  HttpClientInMemoryWebApiModule.forRoot(BalanceData, { dataEncapsulation: false }),
+ //  HttpClientInMemoryWebApiModule.forRoot(BalanceData, { dataEncapsulation: false }),
 
     NstbalanceinputsRoutesModule,
     /* RouterModule.forChild([
@@ -49,7 +48,8 @@ import { NstbalanceinputSearchComponent } from './nstbalanceinput-search/nstbala
 
   ],
 
-  declarations: [NstbalanceinputListComponent, NstbalanceinputDetailComponent, NstbalanceinputEditComponent, NstbalanceinputFilterPipe, NstbalanceinputSearchComponent],
+  declarations: [NstbalanceinputListComponent, NstbalanceinputDetailComponent,
+     NstbalanceinputEditComponent, NstbalanceinputFilterPipe, NstbalanceinputSearchComponent],
   providers: [NstbalanceinputService
     , NstbalanceinputEditGuard
     //   ,NstbalanceinputDetailGuard

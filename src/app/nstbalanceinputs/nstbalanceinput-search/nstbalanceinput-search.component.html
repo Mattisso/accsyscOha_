@@ -1,3 +1,13 @@
-<p>
-  nstbalanceinput-search works!
-</p>
+<div id="search-component">
+  <h4>balance Sheet Search</h4>
+
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let balance of balances$ | async" >
+      <a routerLink="/detail/{{balance.id}}">
+        {{balance.IntitulCompte}}
+      </a>
+    </li>
+  </ul>
+</div>

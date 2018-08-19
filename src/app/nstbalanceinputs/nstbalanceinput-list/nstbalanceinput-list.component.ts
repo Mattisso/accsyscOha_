@@ -46,7 +46,7 @@ export class NstbalanceinputListComponent implements OnInit {
         this.balanceinputservice.getBalances()
         .subscribe((data: INstbalanceinput[]) => {
           this.balances = data;
-          this.filteredBalances = this.balances;
+      this.filteredBalances = this.balances;
           console.log(this.filteredBalances);
         },
           error => this.errorMessage = <any>error);
