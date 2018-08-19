@@ -1,0 +1,15 @@
+﻿<div class="panel panel-primary">
+  <div class="panel-heading">
+    {{pageTitle}}
+  </div>
+  <div>
+    Users from secure api end point:
+    <ul>
+      <li *ngFor="let user of users">{{user.username}}</li>
+    </ul>
+  </div>
+  <p>
+    <a [routerLink]="['/users/login']">Logout</a>
+  </p>
+
+</div>

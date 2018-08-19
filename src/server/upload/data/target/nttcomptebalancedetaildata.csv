@@ -1,0 +1,219 @@
+"_id","_nttcomptebalance_id","NumCompte","IntitulCompte","SoldeDebit","SoldeCredit"
+"5ad3c2b8dcc79711b057bc34",,"102010","Dotation BENIN",0,44829579
+"5ad3c2b8dcc79711b057bc35",,"102020","Dotation BURKINA",0,65643312
+"5ad3c2b8dcc79711b057bc36",,"102040","Dotation CENTRAFRIQUE",0,41326938
+"5ad3c2b8dcc79711b057bc37",,"102050","Dotation COTE D'IVOIRE",0,64842784
+"5ad3c2b8dcc79711b057bc38",,"102060","Dotation GABON",0,64042255
+"5ad3c2b8dcc79711b057bc39",,"102070","Dotation NIGER",0,41279251
+"5ad3c2b8dcc79711b057bc3a",,"102080","Dotation TOGO",0,57203109
+"5ad3c2b8dcc79711b057bc3b",,"102090","Dotation SENEGAL",0,18808451
+"5ad3c2b8dcc79711b057bc3c",,"120000","Report à nouveau",0,578005041
+"5ad3c2b8dcc79711b057bc3d",,"12","Report à nouveau",0,593410553
+"5ad3c2b8dcc79711b057bc3e",,"141800","Subv Equip Etats",0,456333320
+"5ad3c2b8dcc79711b057bc3f",,"196000","Provions  Pensions & Obligations",0,118757127
+"5ad3c2b8dcc79711b057bc40",,"212100","Licence Pédagogique",40973760,0
+"5ad3c2b8dcc79711b057bc41",,"213100","Logiciels Administration",4825000,0
+"5ad3c2b8dcc79711b057bc42",,"213200","Logiciels Pédagogie",574000,0
+"5ad3c2b8dcc79711b057bc43",,"219311","Logiciel Encours",1225000,0
+"5ad3c2b8dcc79711b057bc44",,"220100","Terrains",124848000,0
+"5ad3c2b8dcc79711b057bc45",,"231300","Constructions & Immeubles",264417240,0
+"5ad3c2b8dcc79711b057bc46",,"235100","Amenagement de Bureau",6965000,0
+"5ad3c2b8dcc79711b057bc47",,"238000","Autres Aménag. Instal.",65869007,0
+"5ad3c2b8dcc79711b057bc48",,"239200","Bâtiments & Installations encours",25000000,0
+"5ad3c2b8dcc79711b057bc49",,"244100","Matériel de Bureau",9640532,0
+"5ad3c2b8dcc79711b057bc4a",,"244200","Matériel Informatique",58665248,0
+"5ad3c2b8dcc79711b057bc4b",,"244300","Matériel Bureautique",3671422,0
+"5ad3c2b8dcc79711b057bc4c",,"244400","Mobilier de Bureau",24932695,0
+"5ad3c2b8dcc79711b057bc4d",,"244700","Mobilier de Logement",1764000,0
+"5ad3c2b8dcc79711b057bc4e",,"244810","Mobilier Pédagogique",27553226,0
+"5ad3c2b8dcc79711b057bc4f",,"244820","Matériel Pédagogique",6000570,0
+"5ad3c2b8dcc79711b057bc50",,"244830","Matériel Médical",452000,0
+"5ad3c2b8dcc79711b057bc51",,"245100","Matériel de Transport",63965684,0
+"5ad3c2b8dcc79711b057bc52",,"249460","Matériel Bureautique",58800,0
+"5ad3c2b8dcc79711b057bc53",,"275200","Dépôts & Caut, CEET",248000,0
+"5ad3c2b8dcc79711b057bc54",,"275300","Dépôts & Caut, INTERNET",60000,0
+"5ad3c2b8dcc79711b057bc55",,"275400","Dépôts & Caut,TELECOM",200000,0
+"5ad3c2b8dcc79711b057bc56",,"281300","Amortis Logiciel Admini",0,3910250
+"5ad3c2b8dcc79711b057bc57",,"281400","Amortis. Logiciel Pédagogique",0,334000
+"5ad3c2b8dcc79711b057bc58",,"283130","Amort Contruc. & Immeubles",0,213244238
+"5ad3c2b8dcc79711b057bc59",,"283510","Amort Amén. Bureau",0,4083834
+"5ad3c2b8dcc79711b057bc5a",,"283800","Amort. Autre Amén. Instal",0,39157409
+"5ad3c2b8dcc79711b057bc5b",,"284410","Amort Matériel Bureau",0,6011615
+"5ad3c2b8dcc79711b057bc5c",,"284420","Amort Mat. Informatique",0,28077592
+"5ad3c2b8dcc79711b057bc5d",,"284430","Amort. Mat. Bureautique",0,2864994
+"5ad3c2b8dcc79711b057bc5e",,"284440","Amort Mobilier Bureau",0,11239459
+"5ad3c2b8dcc79711b057bc5f",,"284470","Amort. Mobilier Logement",0,1215650
+"5ad3c2b8dcc79711b057bc60",,"284481","Amort. Mob. Pédagogique",0,22509120
+"5ad3c2b8dcc79711b057bc61",,"284482","Amort Mat. Pédagogique",0,4986737
+"5ad3c2b8dcc79711b057bc62",,"284483","Amort Mat. Médical",0,151000
+"5ad3c2b8dcc79711b057bc63",,"284500","Amort. Matériel Transport",0,38899905
+"5ad3c2b8dcc79711b057bc64",,"401000","FOURN DETTES EN CPTE",0,10498956
+"5ad3c2b8dcc79711b057bc65",,"401100","Fournisseurs Divers",0,4084595
+"5ad3c2b8dcc79711b057bc66",,"408100","Fournisseurs, Fact. non parvenues",0,3500000
+"5ad3c2b8dcc79711b057bc67",,"419100","Collectif Frais Scol., Etud. Privé",0,6176498
+"5ad3c2b8dcc79711b057bc68",,"419400","Autres Créances Etudi",0,2395901
+"5ad3c2b8dcc79711b057bc69",,"411500","Clients Divers",15607478,0
+"5ad3c2b8dcc79711b057bc6a",,"411600"," FNAPP,Etudiants Togolais  ",3850000,0
+"5ad3c2b8dcc79711b057bc6b",,"4116100","Collectif Loyers, Bénin",543250,0
+"5ad3c2b8dcc79711b057bc6c",,"4196200","Collectif Loyers, Burkina",0,472838
+"5ad3c2b8dcc79711b057bc6d",,"4116300","Collectif Loyers, Caméroun",505918,0
+"5ad3c2b8dcc79711b057bc6e",,"4116400","Collectif Loyers, Centrafriq",798974,0
+"5ad3c2b8dcc79711b057bc6f",,"4116500","Collectif Loyers, Cote Ivoire",433368,0
+"5ad3c2b8dcc79711b057bc70",,"4196600","Collectif Loyers, Gabon",0,43677
+"5ad3c2b8dcc79711b057bc71",,"4116700","Collectif Loyers, Niger",61586,0
+"5ad3c2b8dcc79711b057bc72",,"4196800","Collectif Loyers, Togo",0,1943980
+"5ad3c2b8dcc79711b057bc73",,"4116900","Collectif Loyers,  Autres Pays",219500,0
+"5ad3c2b8dcc79711b057bc74",,"4197100","Collectif Loyers, Guinée Equato",0,95000
+"5ad3c2b8dcc79711b057bc75",,"4117400","Collectif Loyers, Congo Brazza",132500,0
+"5ad3c2b8dcc79711b057bc76",,"4117500","Collectif Loyers, Tchad",30500,0
+"5ad3c2b8dcc79711b057bc77",,"416200","Créances Douteuses",11000000,0
+"5ad3c2b8dcc79711b057bc78",,"419600","Etud, Cautions Biblioth. reç  ",0,590000
+"5ad3c2b8dcc79711b057bc79",,"422000","Personnel, Rémun. Dues",0,14439061
+"5ad3c2b8dcc79711b057bc7a",,"421700","Collectif,  C/C Personnel",39800936,0
+"5ad3c2b8dcc79711b057bc7b",,"427100","Collectif Vacataires",0,11704800
+"5ad3c2b8dcc79711b057bc7c",,"427200","Autres Personnels",0,11411425
+"5ad3c2b8dcc79711b057bc7d",,"431100","CNSS(Cotis. Séc. Soci)",0,26392530
+"5ad3c2b8dcc79711b057bc7e",,"431200","Pensions Pers. Détaché",0,19012008
+"5ad3c2b8dcc79711b057bc7f",,"445210","T.V.A. récupérable/Eau",1562224,0
+"5ad3c2b8dcc79711b057bc80",,"445220","T.V.A. récupérable/Electricité",6428240,0
+"5ad3c2b8dcc79711b057bc81",,"445400","T.V.A. récup./Tél. Fax. Roaming",3458980,0
+"5ad3c2b8dcc79711b057bc82",,"447200","Etat, IRPP à Payer",0,99818271
+"5ad3c2b8dcc79711b057bc83",,"447300","Etat, TCS à Payer",0,449808
+"5ad3c2b8dcc79711b057bc84",,"47125820","Organismes Intern., Subv. à Recevoi",0,9032521
+"5ad3c2b8dcc79711b057bc85",,"462100","C/C Bénin",126651473,0
+"5ad3c2b8dcc79711b057bc86",,"462200","C/C Burkina",218309985,0
+"5ad3c2b8dcc79711b057bc87",,"462300","C/C Caméroun",374231552,0
+"5ad3c2b8dcc79711b057bc88",,"462400","C/C Centrafrique",386937699,0
+"5ad3c2b8dcc79711b057bc89",,"462500","C/C Cote d'Ivoire",155424458,0
+"5ad3c2b8dcc79711b057bc8a",,"462600","C/C Gabon",187524500,0
+"5ad3c2b8dcc79711b057bc8b",,"462700","C/C Niger",410401210,0
+"5ad3c2b8dcc79711b057bc8c",,"462800","C/C Togo",131548751,0
+"5ad3c2b8dcc79711b057bc8d",,"462850","C/C Sénégal",128440725,0
+"5ad3c2b8dcc79711b057bc8e",,"462860","C/C Guinée Equatoriale",44199806,0
+"5ad3c2b8dcc79711b057bc8f",,"462870","C/C Mali",90588940,0
+"5ad3c2b8dcc79711b057bc90",,"462880","C/C Congo Brazzaville",49996575,0
+"5ad3c2b8dcc79711b057bc91",,"462890","C/C Tchad",34155070,0
+"5ad3c2b8dcc79711b057bc92",,"471100","Débiteurs Divers",5275208,0
+"5ad3c2b8dcc79711b057bc93",,"471200","Créditeurs Divers",0,10000
+"5ad3c2b8dcc79711b057bc94",,"471210","Différence/caisse à régul",0,157565
+"5ad3c2b8dcc79711b057bc95",,"476622850","Location villa",4320000,0
+"5ad3c2b8dcc79711b057bc96",,"477706130","Frais d'Inscription",0,2050000
+"5ad3c2b8dcc79711b057bc97",,"481200","Fournisseurs Invest",0,26865524
+"5ad3c2b8dcc79711b057bc98",,"491100","Dépréciations des comptes",0,13450000
+"5ad3c2b8dcc79711b057bc99",,"521210","UTB C/C",38217492,0
+"5ad3c2b8dcc79711b057bc9a",,"521230","ECOBANK-TOGO (PGU)",4952197,0
+"5ad3c2b8dcc79711b057bc9b",,"521240","BIA-TG C/C",1094814,0
+"5ad3c2b8dcc79711b057bc9c",,"521260","ECOBANK-TG (POLE D'EXCELLENCE)",4075609,0
+"5ad3c2b8dcc79711b057bc9d",,"522200","BANK OF AFRICA (BOA) COTONOU",1657475,0
+"5ad3c2b8dcc79711b057bc9e",,"570100","Caisse Revenus",28258116,0
+"5ad3c2b8dcc79711b057bc9f",,"570300","Caisse menue dépenses",2000,0
+"5ad3c2b8dcc79711b057bca0",,"604300","Linge, Vêt & Produit Entret",964205,0
+"5ad3c2b8dcc79711b057bca1",,"604710","Fournitures de Bureau",4780067,0
+"5ad3c2b8dcc79711b057bca2",,"604720","Fournitures Informatiques",2222293,0
+"5ad3c2b8dcc79711b057bca3",,"605110","Eau-Cité",2885230,0
+"5ad3c2b8dcc79711b057bca4",,"605120","Eau-Direction",171085,0
+"5ad3c2b8dcc79711b057bca5",,"605130","Eau Villa Etudiant",397880,0
+"5ad3c2b8dcc79711b057bca6",,"605210","Electricité-Cité",9068279,0
+"5ad3c2b8dcc79711b057bca7",,"605220","Electricité Direction",3979251,0
+"5ad3c2b8dcc79711b057bca8",,"605230","Electricité Villa Etudiant",900292,0
+"5ad3c2b8dcc79711b057bca9",,"605240","Electricité Villa EAMAU",303339,0
+"5ad3c2b8dcc79711b057bcaa",,"605300","Carburant & Lubrifiant",9137120,0
+"5ad3c2b8dcc79711b057bcab",,"605500","Manuels & Fourn. Scol. & Péd.",471595,0
+"5ad3c2b8dcc79711b057bcac",,"614100","Frais Transport Personnel",725440,0
+"5ad3c2b8dcc79711b057bcad",,"616200","Transport de plis : EMS, DHL",1992381,0
+"5ad3c2b8dcc79711b057bcae",,"618110","Transp/Miss-Etud. Enseign",661000,0
+"5ad3c2b8dcc79711b057bcaf",,"618120","Transp/Miss-Pers Admi",15516460,0
+"5ad3c2b8dcc79711b057bcb0",,"618300","Transp/Pers Expat., Admi, Expert",22462726,0
+"5ad3c2b8dcc79711b057bcb1",,"622600","Locat & Charges Locat Diver",14092596,0
+"5ad3c2b8dcc79711b057bcb2",,"622700","Location Matériel",3246497,0
+"5ad3c2b8dcc79711b057bcb3",,"622800","Autres Charges Locatives",4438963,0
+"5ad3c2b8dcc79711b057bcb4",,"622850","Locations Villa",2900000,0
+"5ad3c2b8dcc79711b057bcb5",,"624100","Entret. & Répar. Biens Immob.",9714645,0
+"5ad3c2b8dcc79711b057bcb6",,"624200","Entret. & Répart. Mobil. Bureau",15000,0
+"5ad3c2b8dcc79711b057bcb7",,"624300","Entret. & Répar. Mob de Loge",240000,0
+"5ad3c2b8dcc79711b057bcb8",,"624810","Entret.  & Répar. Mat Bureau",722431,0
+"5ad3c2b8dcc79711b057bcb9",,"624820","Entret. & Réparat. Mat Informa",1373250,0
+"5ad3c2b8dcc79711b057bcba",,"624825","Entretien Logiciel",6000000,0
+"5ad3c2b8dcc79711b057bcbb",,"624830","Entret. & Réparat. Mat Pédag",30000,0
+"5ad3c2b8dcc79711b057bcbc",,"624850","Entret. & Répar. Mat Transp",7878781,0
+"5ad3c2b8dcc79711b057bcbd",,"624860","Entret. & Répar. Climatiseur",890130,0
+"5ad3c2b8dcc79711b057bcbe",,"624870","Entret & Rép. Mat Bureautique",314745,0
+"5ad3c2b8dcc79711b057bcbf",,"625200","Assur Matériel de Transport",396480,0
+"5ad3c2b8dcc79711b057bcc0",,"625800","Aut Primes d'Assurances",3400110,0
+"5ad3c2b8dcc79711b057bcc1",,"626500","Documentation Générale",4233088,0
+"5ad3c2b8dcc79711b057bcc2",,"626600","Documentation Technique",300000,0
+"5ad3c2b8dcc79711b057bcc3",,"627100","Avis & Annonces",378000,0
+"5ad3c2b8dcc79711b057bcc4",,"627200","Imprimés publicitaires",1815000,0
+"5ad3c2b8dcc79711b057bcc5",,"627700","Frais de Réception, Direction",14321715,0
+"5ad3c2b8dcc79711b057bcc6",,"627800","Aut charges pub. & relat. pub",10415200,0
+"5ad3c2b8dcc79711b057bcc7",,"628100","Frais de téléphone",7973941,0
+"5ad3c2b8dcc79711b057bcc8",,"628300","Frais de télécopie(Fax)",1601810,0
+"5ad3c2b8dcc79711b057bcc9",,"628400","Achats Timbres Poste(Affranchis)",192150,0
+"5ad3c2b8dcc79711b057bcca",,"628800","Autres frais télecom",3146480,0
+"5ad3c2b8dcc79711b057bccb",,"631000","Frais Opérations Bancaires",1118961,0
+"5ad3c2b8dcc79711b057bccc",,"632400","Honoraires Consultants",4860000,0
+"5ad3c2b8dcc79711b057bccd",,"632800","Divers frais(réuin, conseil stat)",42870300,0
+"5ad3c2b8dcc79711b057bcce",,"632900","Rémunér.:Interm, Trav Etudes",24130460,0
+"5ad3c2b8dcc79711b057bccf",,"633100","Frais de Formation Personnel",580000,0
+"5ad3c2b8dcc79711b057bcd0",,"638300","Réception : Sémin. Colloq. Atelier",1551000,0
+"5ad3c2b8dcc79711b057bcd1",,"638320","Réception : Frais Souten. Diplome",10595845,0
+"5ad3c2b8dcc79711b057bcd2",,"638410","Mission : Perdiem Personnel EAMAU",23064266,0
+"5ad3c2b8dcc79711b057bcd3",,"638420","Mission : Perdiem Admistrateur, Exp",650000,0
+"5ad3c2b8dcc79711b057bcd4",,"638430","Missions : Perdiem Etudiants",439000,0
+"5ad3c2b8dcc79711b057bcd5",,"638440","Missions Enseignant",230000,0
+"5ad3c2b8dcc79711b057bcd6",,"638450","Mission :Perdiem autres personnes",117500,0
+"5ad3c2b8dcc79711b057bcd7",,"638600","Frais de recouvrement",4900000,0
+"5ad3c2b8dcc79711b057bcd8",,"641800","Autres impots & taxes directs",755100,0
+"5ad3c2b8dcc79711b057bcd9",,"658100","Jetons prés & rémun. Adminis",5000000,0
+"5ad3c2b8dcc79711b057bcda",,"658200","Subventions, Dons",7781345,0
+"5ad3c2b8dcc79711b057bcdb",,"661100","Appoint, Salaires & Commisn",74594003,0
+"5ad3c2b8dcc79711b057bcdc",,"661300","Prime Spéciale de Fonction",9435000,0
+"5ad3c2b8dcc79711b057bcdd",,"661600","Allocations Familiales",216000,0
+"5ad3c2b8dcc79711b057bcde",,"661800","Indemnité de transport",5212000,0
+"5ad3c2b8dcc79711b057bcdf",,"662100","Appoint, Salaire & Commis",46849940,0
+"5ad3c2b8dcc79711b057bce0",,"662300","Prime Spéciale de Fonction",7995000,0
+"5ad3c2b8dcc79711b057bce1",,"662600","Allocations Familiales",312000,0
+"5ad3c2b8dcc79711b057bce2",,"662800","Indemnité de transport",1160000,0
+"5ad3c2b8dcc79711b057bce3",,"663100","Indemnité de Logement",14815000,0
+"5ad3c2b8dcc79711b057bce4",,"663820","Indemnité de Caisse",240000,0
+"5ad3c2b8dcc79711b057bce5",,"663830","Indemnité  Cessation de Service",23677811,0
+"5ad3c2b8dcc79711b057bce6",,"663850","Indemnité de Résidence",5511425,0
+"5ad3c2b8dcc79711b057bce7",,"663860","Prime Service Prolongé",360000,0
+"5ad3c2b8dcc79711b057bce8",,"663870","Prime d'intérim",230000,0
+"5ad3c2b8dcc79711b057bce9",,"663875","Indemnité de congé",555808,0
+"5ad3c2b8dcc79711b057bcea",,"663880","Prime de responsabilité",1217535,0
+"5ad3c2b8dcc79711b057bceb",,"663910","Indemnité de Logement",7305000,0
+"5ad3c2b8dcc79711b057bcec",,"663920","Indemnité de Représentation",2747635,0
+"5ad3c2b8dcc79711b057bced",,"663930","Indemnité d'Expatriation",5505905,0
+"5ad3c2b8dcc79711b057bcee",,"663975","Indemnité de congé",3772357,0
+"5ad3c2b8dcc79711b057bcef",,"663980","Indemnité Résidence",3018843,0
+"5ad3c2b8dcc79711b057bcf0",,"663990","Prime d'Audit",2256913,0
+"5ad3c2b8dcc79711b057bcf1",,"663995","Prime de coordination",439440,0
+"5ad3c2b8dcc79711b057bcf2",,"664100","Charges Soc./rémun.,  national",9104605,0
+"5ad3c2b8dcc79711b057bcf3",,"664200","Charges Soc./rémun.,  non nati",518319,0
+"5ad3c2b8dcc79711b057bcf4",,"667100","Rém. Vacataires Missionnaire",49613600,0
+"5ad3c2b8dcc79711b057bcf5",,"667200","Indemnité de Prestations",13428000,0
+"5ad3c2b8dcc79711b057bcf6",,"668100","Remb. Frais Médic., Nationaux",2339703,0
+"5ad3c2b8dcc79711b057bcf7",,"668200","Remb. Frais Médic., Expatriés",1513564,0
+"5ad3c2b8dcc79711b057bcf8",,"668300","Remb. Frais Scol., Nationaux",1814336,0
+"5ad3c2b8dcc79711b057bcf9",,"668400","Remb. Frais Scol., Expatriés",1101563,0
+"5ad3c2b8dcc79711b057bcfa",,"668450","Produits Pharmaceutiques",299000,0
+"5ad3c2b8dcc79711b057bcfb",,"668500","Titres Transp. Statutaires",1300000,0
+"5ad3c2b8dcc79711b057bcfc",,"668550","Autres Charges Sociales",15718194,0
+"5ad3c2b8dcc79711b057bcfd",,"681200","Dotat aux amorts. Immob. Corpor",33102835,0
+"5ad3c2b8dcc79711b057bcfe",,"691100","Provis  Risques & Charges",12095680,0
+"5ad3c2b8dcc79711b057bcff",,"706110","Frais Scol:Etud Stat Privé",0,99100000
+"5ad3c2b8dcc79711b057bd00",,"706120","Frais Scol.:Etud Boursiers",0,401603889
+"5ad3c2b8dcc79711b057bd01",,"706130","Frais d'inscription",0,6762500
+"5ad3c2b8dcc79711b057bd02",,"707300","Loyers Chambres Cité Etudiants",0,5324500
+"5ad3c2b8dcc79711b057bd03",,"707810","Séminaires, Colloques, Ateliers",0,5600000
+"5ad3c2b8dcc79711b057bd04",,"707860","Surplus de caisse",0,765
+"5ad3c2b8dcc79711b057bd05",,"718800","Subv Exploit des Etats",0,576221571
+"5ad3c2b8dcc79711b057bd06",,"718900","Subv. Exploit, Organisme In",0,2541000
+"5ad3c2b8dcc79711b057bd07",,"759400","Reprise provision sur créances",0,700000
+"5ad3c2b8dcc79711b057bd08",,"791000","Reprises Provisions Exploitation",0,23677811
+"5ad3c2b8dcc79711b057bd09",,"812000","Valeurs Compt. Cessions Immo. Corp",3434178,0
+"5ad3c2b8dcc79711b057bd0a",,"822000","Produits Cessions Immo. Corp.",0,500000
+"5ad3c2b8dcc79711b057bd0b",,"83100","Charges Hors Activ. Ordin.",2322000,0
+"5ad3c2b8dcc79711b057bd0c",,"84100","Produits HAO Constatés",0,4290400
+"5ad3c2b8dcc79711b057bd0d",,"865000","Reprises Subventions Investissement",0,968000

@@ -1,0 +1,65 @@
+<div lass="panel panel-primary">
+  <div class="panel-heading">
+    {{pageTitle}}
+  </div>
+  <div class="panel-body">
+    <form class="form-horizontal" novalidate
+    [formGroup]="registerForm" (ngSubmit)="register()">
+      <fieldset>
+        <div class="form-group" [ngClass]="setClassUsername()">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa fa-user"></i>
+            </span>
+          </div>
+          <label class="col-md-2 control-label" for="usernameId">username</label>
+          <div class="col-md-8">
+            <input class="form-control" id="usernameId" type="text" placeholder="Username" autofocus name="username" formControlName="username">
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="setClassPassword()">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa fa-key"></i>
+            </span>
+          </div>
+          <label class="col-md-2 control-label" for="passwordId">password</label>
+          <div>
+            <input class="form-control" type="password" name="password" id="passwordId" formControlName="password" placeholder="Password">
+          </div>
+        </div>
+        <!--     <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !firstName.valid }">
+      <label for="isAdmin">Is Admin</label>
+      <input type="text" class="form-control" name="isAdmin" [(ngModel)]="model.isAdmin" #firstName="ngModel" required />
+      <div *ngIf="f.submitted && !isAdmin.valid" class="help-block">isAdmin is required</div>
+    </div> -->
+        <select class="custom-select" name="role" formControlName="role">
+          <option value="" selected disabled>Role</option>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+        <!-- <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !lastName.valid }">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required />
+      <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last Name is required</div>
+    </div> -->
+        <div class="form-group">
+          <div class="col-md-4 col-md-offset-2">
+            <span>
+              <button class="btn btn-primary" type="submit" style="width:80px;margin-right:10px" [disabled]="!registerForm.valid">
+                <i class="fa fa-user-plus"></i>
+                Register</button>
+              <!--      <img *ngIf="loading" src="" /> -->
+            </span>
+            <span>
+              <a [routerLink]="['/users/login']" class="btn btn-link">Cancel</a>
+            </span>
+
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+  </div>
+</div>
