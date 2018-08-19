@@ -1,0 +1,112 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+      {{pageTitle}}
+  </div>
+
+  <div class="panel-body">
+      <form class="form-horizontal"
+            novalidate
+            (ngSubmit)="saveBalance()"
+            [formGroup]="nstbalanceinputForm" >
+          <fieldset>
+              <div class="form-group"
+                   [ngClass]="{'has-error': displayMessage.IntitulCompte}">
+                  <label class="col-md-2 control-label"
+                   for="IntitulCompteId">balance Name</label>
+
+                  <div class="col-md-8">
+                      <input class="form-control"
+                              id="IntitulCompteId"
+                              type="text"
+                              placeholder="Name (required)"
+                              formControlName = "IntitulCompte" />
+                      <span class="help-block" *ngIf="displayMessage.IntitulCompte">
+                                  {{displayMessage.IntitulCompte}}
+                      </span>
+                  </div>
+              </div>
+
+              <div class="form-group"
+                   [ngClass]="{'has-error': displayMessage.NumCompte}">
+                  <label class="col-md-2 control-label" for="NumCompteId">Compte Number</label>
+
+                  <div class="col-md-8">
+                      <input class="form-control"
+                              id="NumCompteId"
+                              type="text"
+                              placeholder="Code (required)"
+                              required
+                              formControlName = "NumCompte"/>
+                      <span class="help-block" *ngIf="displayMessage.NumCompte">
+                                {{displayMessage.NumCompte}}
+                      </span>
+                  </div>
+              </div>
+
+
+              <div class="form-group" [ngClass]="{'has-error': displayMessage.SoldeDebit}">
+                <label class="col-md-2 control-label" for="SoldeDebitId">Solde Debit</label>
+
+                <div class="col-md-8">
+                    <input class="form-control"
+                            id="SoldeDebitId"
+                            type="text"
+                            placeholder="Solde Debit"
+                            formControlName="SoldeDebit" />
+                    <span class="help-block" *ngIf="displayMessage.SoldeDebit">
+                            {{displayMessage.SoldeDebit}}
+                    </span>
+                </div>
+            </div>
+
+              <div class="form-group" [ngClass]="{'has-error': displayMessage.SoldeCredit}">
+                <label class="col-md-2 control-label" for="SoldeCreditId">Solde Credit</label>
+
+                <div class="col-md-8">
+                    <input class="form-control"
+                            id="SoldeCreditId"
+                            type="text"
+                            placeholder="Solde Credit"
+                            formControlName="SoldeCredit" />
+                    <span class="help-block" *ngIf="displayMessage.SoldeCredit">
+                            {{displayMessage.SoldeCredit}}
+                    </span>
+                </div>
+            </div>
+
+
+
+
+
+
+              <div class="form-group">
+                  <div class="col-md-4 col-md-offset-2">
+                      <span>
+                          <button class="btn btn-primary"
+                                  type="submit"
+                                  style="width:80px;margin-right:10px"
+                                  [disabled]="!nstbalanceinputForm.valid">
+                                <!-- (click)="saveBalance()"> -->
+                              Save
+                          </button>
+                      </span>
+                      <span>
+                          <a class="btn btn-default"
+                             [routerLink]="['/nstbalanceinputs']">
+                              Cancel
+                          </a>
+                      </span>
+                      <span>
+                          <a class="btn btn-default"
+                             (click)="deleteBalance()">
+                              Delete
+                          </a>
+                      </span>
+                   </div>
+              </div>
+          </fieldset>
+      </form>
+      <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+  </div>
+
+</div>

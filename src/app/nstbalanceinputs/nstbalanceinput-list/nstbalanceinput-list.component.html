@@ -1,0 +1,50 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    {{pageTitle}}
+  </div>
+  <!-- Filter the balance sheet   -->
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-2">Filter by:</div>
+      <div class="col-md-4">
+        <input type="text" [(ngModel)]="listFilter" />
+      </div>
+    </div>
+    <div class="row" *ngIf="listFilter">
+      <div class="col-md-6">
+        <h3>Filtered by:{{listFilter}} </h3>
+      </div>
+    </div>
+    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+    <div class="table-responsive">
+      <table class="table" *ngIf="balances && balances.length">
+        <thead>
+          <tr>
+            <th>NumCompte</th>
+            <th>IntitulCompte</th>
+            <th>SoldeDebit</th>
+            <th>SoldeCredit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let balance of filteredBalances">
+
+            <td> {{ balance.NumCompte }}
+            </td>
+            <td> <a [routerLink]="['/nstbalanceinputs', balance.id]">
+                          {{ balance.IntitulCompte | lowercase | convertToSpaces : ',' }}
+                        </a>
+            </td>
+            <td>{{ balance.SoldeDebit |currency:'USD':true: '1.0-2'}}</td>
+            <td>{{ balance.SoldeCredit |currency:'USD':true: '1.2-2'}}</td>
+            <td>
+              <a class="btn btn-primary" [routerLink]="['/nstbalanceinputs',balance.id, 'edit']">
+                               Edit
+                          </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
