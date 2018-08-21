@@ -21,7 +21,7 @@ const httpOptions = {
   }),
   response: 'json'
 };
-const API_URL = environment.apiUrl;
+// const API_URL = environment.apiUrl;
 
 @Injectable()
 export class AuthService {

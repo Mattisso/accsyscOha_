@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, Optional} from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 
@@ -26,7 +27,7 @@ const httpOptions = {
 export class NstbalanceinputService {
 
   // private  API_URL = environment.apiUrl;
-  private baseUrl = `api/nstbalanceinputs`; // environment.baseUrl;
+  private balanceinput_Url = `api/nstbalanceinputs`; // environment.balanceinput_Url;
 
   private handleError: HandleError;
   balances: INstbalanceinput[] = [];
@@ -34,14 +35,16 @@ export class NstbalanceinputService {
   constructor(private http: HttpClient,
      private messageService: MessageService,
     httpErrorHandler: HttpErrorHandler,
-   private auth:  AuthService) {
+   private auth:  AuthService,
+   @Optional() @Inject(APP_BASE_HREF) origin: string) {
     this.handleError = httpErrorHandler.createHandleError('NstbalanceinputService');
+    this.balanceinput_Url = `${origin}${this.balanceinput_Url}`;
   }
 
   getBalances(): Observable<INstbalanceinput[]> {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-     const url = `${this.baseUrl}`;
+     const url = `${this.balanceinput_Url}`;
     return this.http.get<INstbalanceinput[]>(url, {responseType: 'json'}).pipe(
  //     of(new HttpResponse({status:200, body:body})),
  map(this.extractData),
@@ -51,7 +54,7 @@ export class NstbalanceinputService {
   }
 
   getHeroNo404<Data>(id: string): Observable<INstbalanceinput> {
-    const url = `${this.baseUrl}/?id=${id}`;
+    const url = `${this.balanceinput_Url}/?id=${id}`;
     return this.http.get<INstbalanceinput[]>(url)
       .pipe(
         map(heroes => heroes[0]), // returns a {0|1} element array
@@ -82,7 +85,7 @@ export class NstbalanceinputService {
       // if not search term, return empty hero array.
       return of([]);
     }
-    return this.http.get<INstbalanceinput[]>(`${this.baseUrl}/?IntitulCompte=${term}`).pipe(
+    return this.http.get<INstbalanceinput[]>(`${this.balanceinput_Url}/?IntitulCompte=${term}`).pipe(
       tap(_ => this.log(`found heroes matching "${term}"`)),
       catchError(this.handleError<INstbalanceinput[]>('searchHeroes', []))
     );
@@ -96,7 +99,7 @@ export class NstbalanceinputService {
 // const options = new RequestOptions({ headers: headers });
     const id = typeof balance === 'string' ? balance : balance.id;
 
-    const url = `${this.baseUrl}/${id}`;
+    const url = `${this.balanceinput_Url}/${id}`;
     return this.http.delete<INstbalanceinput>(url, {headers: headers}).pipe(
        tap(_ => this.log(`deleted BalanceInput id:  ${id}`)),
       catchError(this.handleError<INstbalanceinput>(`deleteBalance`))
@@ -117,7 +120,7 @@ export class NstbalanceinputService {
   }
 
   private createBalance(balance: INstbalanceinput): Observable<INstbalanceinput> {
-    const url = `${this.baseUrl}`;
+    const url = `${this.balanceinput_Url}`;
     balance.id = undefined;
     return this.http.post<INstbalanceinput>(url, balance, httpOptions).pipe(
       // .map(this.extractData)
@@ -132,7 +135,7 @@ export class NstbalanceinputService {
   private updateBalance(balance: INstbalanceinput): Observable<any> {
     httpOptions.headers =
       httpOptions.headers.set('Authorization', 'my-new-auth-token');
-    const url = `${this.baseUrl}/${balance.id}`;
+    const url = `${this.balanceinput_Url}/${balance.id}`;
     return this.http.put<INstbalanceinput>(url, balance, httpOptions).pipe(
       //   map(() => balance),
        tap(_ => this.log(`updated Balanceinput id: ${balance.id}`)),

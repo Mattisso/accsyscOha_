@@ -16,7 +16,7 @@ import {UserRoutingModule} from './user-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { RegisterComponent } from './register';
 import { LogoutComponent } from './logout/logout.component';
-import { AdminComponent } from '../admin/admin.component';
+// import { AdminComponent } from '../admin/admin.component';
 import { AccountComponent } from './account/account.component';
 import { AboutComponent } from './about/about.component';
 
@@ -44,7 +44,7 @@ export function tokenGetter() {
     RegisterComponent,
    LoginComponent,
     LogoutComponent,
-    AdminComponent,
+   //  AdminComponent,
     AccountComponent,
     AboutComponent
   ],

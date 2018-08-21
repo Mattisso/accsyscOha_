@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { HttpClientModule , HttpClientXsrfModule } from '@angular/common/http';
 import { Router } from '@angular/router';
 import {HttpModule} from '@angular/http';
- import { JwtModule, JwtHelperService } from '@auth0/angular-jwt';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { BalanceData } from './mock-data/nstbalanceinputdata';
+import { JwtModule, JwtHelperService } from '@auth0/angular-jwt';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { BalanceData } from './mock-data/nstbalanceinputdata';
 import { RequestCache, RequestCacheWithMap } from './request-cache.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -15,7 +17,7 @@ import { fakeBackendProvider } from './_helper/fake-backend';
 
 
 // Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppRoutingModule, } from './app-routing.module';
   import { AuthService } from './users/_services/auth.service';
@@ -56,7 +58,7 @@ import { ConfigComponent } from './config/config.component';
   ConfigComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'ohada-account' }),
   HttpModule,
   HttpClientModule,
   AppRoutingModule,
@@ -78,7 +80,7 @@ import { ConfigComponent } from './config/config.component';
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-         whitelistedDomains: ['localhost:3000', 'localhost:3100'],
+         whitelistedDomains: ['localhost:3000'],
     //  blacklistedRoutes: ['localhost:3000']
       }
     }),
@@ -109,7 +111,13 @@ AppRoutingModule*/
 })
 export class AppModule {
    // Diagnostic only: inspect router configuration
-   constructor(router: Router) {
+   constructor(router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(APP_ID) private appId: string) {
     console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+    const platform = isPlatformBrowser(platformId) ?
+    'in the browser' : 'on the server';
+  console.log(`Running ${platform} with appId=${appId}`);
   }
  }
+

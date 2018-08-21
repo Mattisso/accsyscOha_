@@ -11,7 +11,7 @@
           <a [routerLink]="['/nstbalanceinputs']">Balance Sheet List</a>
         </li>
         <li class="nav-link" routerLinkActive="active">
-          <a [routerLink]="['/nstbalanceinputs',id,'edit']">Add Balance</a>
+          <a [routerLink]="['/nstbalanceinputs',0,'edit']">Add Balance</a>
         </li>
         <li class="nav-link">
           <a routerLink="/admin" routerLinkActive="active">Admin</a>
@@ -29,17 +29,17 @@
           <a [routerLink]="['/users/login']">LogIn</a>
         </li>
         <li class="nav-link">
-          <a routerLink="/users/register" class="nav-link" routerLinkActive="active" *ngIf="!authService.loggedIn">
+          <a routerLink="/users/register" class="nav-link" routerLinkActive="active" *ngIf="!authService.isLoggedIn">
             <i class="fa fa-user-plus"></i> Register
           </a>
         </li>
         <li class="nav-link">
-          <a routerLink="/account" class="nav-link" routerLinkActive="active" *ngIf="authService.loggedIn">
+          <a routerLink="/account" class="nav-link" routerLinkActive="active" *ngIf="authService.isLoggedIn">
             <i class="fa fa-user"></i> Account ({{authService.currentUser.username}})
           </a>
         </li>
         <li class="nav-link">
-          <a routerLink="/admin" class="nav-link" routerLinkActive="active" *ngIf="authService.loggedIn && authService.isAdmin">
+          <a routerLink="/admin" class="nav-link" routerLinkActive="active" *ngIf="authService.isLoggedIn && authService.isAdmin">
             <i class="fa fa-lock"></i> Admin
           </a>
         </li>

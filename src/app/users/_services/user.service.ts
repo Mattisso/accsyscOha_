@@ -21,7 +21,7 @@ const httpOptions = {
 };
 
 
-const API_URL = environment.apiUrl;
+// const API_URL = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root'
@@ -41,7 +41,7 @@ export class UserService {
      }
 
   getUsers(): Observable<IUser[]> {
-    const url = `${API_URL}/${this.baseUrl}`;
+    const url = `${this.baseUrl}`;
 
     return this.http.get<IUser[]>(url, httpOptions).pipe(
       // .map(this.extractData)
@@ -57,7 +57,7 @@ export class UserService {
    // const headers = new Headers({ 'Content-Type': 'application/json' });
    // const options = new RequestOptions({ headers: headers });
 
-    const url = `${API_URL}/${this.baseUrl}/login`;
+    const url = `${this.baseUrl}/login`;
     return this.http.post(url, credentials, httpOptions).pipe(
         //   .map(this.extractData)
      tap(data => console.log('getUser: ' + JSON.stringify(data))),
@@ -70,7 +70,7 @@ export class UserService {
 
   countUsers():  Observable<number> {
 
-    const url = `${API_URL}/${this.baseUrl}/count`;
+    const url = `${this.baseUrl}/count`;
     return this.http.get<number>(url).pipe(
   // .map(this.extractData)
  tap(data => this.log('getUser: ' + JSON.stringify(data))),
@@ -81,7 +81,7 @@ export class UserService {
     if (id === null) {
       return of(this.initializeIUser());
     }
-    const url = `${API_URL}/${this.baseUrl}/${id}`;
+    const url = `${this.baseUrl}/${id}`;
     return this.http.get<IUser>(url).pipe(
        // .map(this.extractData)
     tap(data => this.log('getUser: ' + JSON.stringify(data)),
