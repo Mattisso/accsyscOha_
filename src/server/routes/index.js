@@ -1,6 +1,6 @@
 const path = require('path');
 var  routes = require('express').Router();
-/*
+
 var  nstbalanceinputsRoutes= require( path.join(__dirname,'../../api/nstbalanceinputs'));
 var  nsbalanceRouter= require( path.join(__dirname,'../../api/nstbalances'));
 var  nttbalanceRouter= require( path.join(__dirname,'../../api/nttbalances'));
@@ -8,15 +8,15 @@ var  nttcomptebalanceRouter= require( path.join(__dirname,'../../api/nttcompteba
 var userRouter =require( path.join(__dirname,'../../api/users'));
 
 var  nttcomptebalancedetailRouter= require( path.join(__dirname,'../../api/nttcomptebalancedetail'));
-*/
 
+/*
 var  nstbalanceinputsRoutes= require('./nstbalanceinputs');
 var  nsbalanceRouter= require('./nstbalances');
 var  nttbalanceRouter= require('./nttbalances');
 var  nttcomptebalanceRouter= require('./nttcomptebalances');
 var userRouter =require('./users')
 
-var  nttcomptebalancedetailRouter= require('./nttcomptebalancedetail');
+var  nttcomptebalancedetailRouter= require('./nttcomptebalancedetail');*/
 
 routes.get('/', (req, res) => {
  return  res.status(200).json({ message: 'Connected!' });
