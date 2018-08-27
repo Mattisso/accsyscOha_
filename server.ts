@@ -4,14 +4,16 @@
 import 'zone.js/dist/zone-node';
 import 'reflect-metadata';
 
+
 import { enableProdMode } from '@angular/core';
 
 import * as express from 'express';
-import * as path from 'path';
+const path = require('path');
+import { readFileSync } from 'fs';
+// Import module map for lazy loading
+import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
-
-
 
 const opn = require('opn');
 const logger = require('morgan');
@@ -28,33 +30,32 @@ dotenv.load({ path: '.env' });
 const port = process.env.PORT || 3000;
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
-const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main');
+ const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require(path.join(__dirname, './dist/server/main'));
 
 // Express Engine
 import { ngExpressEngine } from '@nguniversal/express-engine';
-// Import module map for lazy loading
-import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 
-app.engine('html', ngExpressEngine({
-  bootstrap: AppServerModuleNgFactory,
-  providers: [
-    provideModuleMap(LAZY_MODULE_MAP)
-  ]
-}));
+
+app.engine('html', ngExpressEngine(
+  {bootstrap: AppServerModuleNgFactory,
+  providers: [ provideModuleMap(LAZY_MODULE_MAP) ]
+}
+));
 
 app.set('view engine', 'html');
 app.set('views', path.join(DIST_FOLDER, 'browser'));
 
 // var setRoutes= require('./routes/api-routes');
-const setRoutes = require(path.join(__dirname, '../server/routes/index'));
-const users = require(path.join(__dirname, '../server/routes/users'));
+
+const setRoutes = require(path.join(__dirname, './src/server/routes/index'));
+const users = require(path.join(__dirname, './src/server/routes/users'));
 // --path.join(__dirname, '../client/index.html'));
 
 const  bodyParser = require('body-parser');
 app.use(logger('combined'));
 app.use(logger('dev'));
 app.use(logger(':method :url :status :res[content-length] - :response-time ms'));
-require(path.join(__dirname, '../server/config/ohadb')).connectserver();
+require(path.join(__dirname, './src/server/config/ohadb')).connectserver();
 app.use(cors());
 
 
@@ -70,13 +71,23 @@ app.use(function (req, res, next) {
 });
 
 // import  { balancesheetupload } require( './routes/balancesheetupload'
+// parse application/x-www-form-urlencoded
 
 
-app.use(bodyParser.json());
+
+// app.use(bodyParser.json());
+// parse various different custom JSON types as JSON
+app.use(bodyParser.json({ type: 'application/*+json' }));
+
+// parse some custom thing into a Buffer
+app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }));
+
+// parse an HTML body into a string
+app.use(bodyParser.text({ type: 'text/html' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse various different custom JSON types as JSON
-app.use(express.static(path.resolve(__dirname, '../public')));
+app.use(express.static(path.resolve(__dirname, './src/public')));
 // Server static files from /browser
 app.get('*.*', express.static(path.join(DIST_FOLDER, 'browser')));
 
@@ -89,24 +100,36 @@ app.use(require('webpack-dev-middleware')(compiler, {
 app.use(setRoutes);
 app.use('/users', users);
 
-
+/*
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, './src/index.html'));
 });
 
-
+*/
 
 // All regular routes use the Universal engine
-app.get('*', (req, res) => {
+/*app.get('*', (req, res) => {
   res.render('index', { req });
 });
+*/
 
+app.get('/api/*', (req, res) => {
+  res.status(404).send('data requests are not supported');
+});
+
+
+app.get('/**/*', (req, res) => {
+  res.render('../dist/index', {
+    req,
+    res
+  });
+});
 
 
 app.listen(port, function (err) {
   if (err) {
     console.log(err);
   } else {
-    opn(`http://localhost: ${port}`);
+    opn(` Node server listening on  http://localhost: ${port}`);
   }
 });

@@ -28,8 +28,6 @@ var dataservice = require('../helper/models/user/userCtrl');
     });
   }
   );
-
-
   userRouter.post('/users/login',function (req, res, next) {
     User.getAuthenticated(req.body.username, req.body.password, function (err, user, reason) {
       if (err)

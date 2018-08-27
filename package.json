@@ -9,9 +9,11 @@
     "lint": "tslint ./src/**/*.ts -t verbose",
     "lint:watch": "npm run lint -- --watch",
     "e2e": "ng e2e",
-    "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
+    "build": " npm-run-all --parallel build:client-and-server-bundles webpack:server",
+    "build-prod":"ng build --prod",
+    "ohada-server":" ng run system-ohada:server",
     "serve:ssr": "node dist/server.js",
-    "build:client-and-server-bundles": "ng build --prod && ng run system-ohada:server",
+    "build:client-and-server-bundles": "npm-run-all --parallel build-prod ohada-server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "clean-dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean-dist"
