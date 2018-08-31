@@ -6,6 +6,8 @@ import 'reflect-metadata';
 
 
 import { enableProdMode } from '@angular/core';
+// Express Engine
+import { ngExpressEngine } from '@nguniversal/express-engine';
 
 import * as express from 'express';
 const path = require('path');
@@ -27,13 +29,10 @@ const app = express();
 const DIST_FOLDER = path.join(process.cwd(), 'dist');
 const dotenv = require('dotenv');
 dotenv.load({ path: '.env' });
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
- const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require(path.join(__dirname, './dist/server/main'));
-
-// Express Engine
-import { ngExpressEngine } from '@nguniversal/express-engine';
+ const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main');
 
 
 app.engine('html', ngExpressEngine(
@@ -101,28 +100,23 @@ app.use(setRoutes);
 app.use('/users', users);
 
 /*
-app.get('/', function (req, res) {
+app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, './src/index.html'));
 });
-
 */
+
 
 // All regular routes use the Universal engine
-/*app.get('*', (req, res) => {
-  res.render('index', { req });
+app.get('*', (req, res) => {
+  res.render(path.join(DIST_FOLDER, 'browser', 'index.html'),
+  { req, res },
+  (err: Error, html: string) => {
+res.status(html ? 200 : 500).send(html || err.message);
+  });
 });
-*/
 
 app.get('/api/*', (req, res) => {
   res.status(404).send('data requests are not supported');
-});
-
-
-app.get('/**/*', (req, res) => {
-  res.render('../dist/index', {
-    req,
-    res
-  });
 });
 
 
