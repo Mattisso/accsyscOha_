@@ -8,6 +8,11 @@ import { AuthGuard} from './users/_services/auth-guard.service';
 import { SelectiveStrategy } from './selective-strategy.service';
 
 const appRoutes: Routes = [
+  { path: 'users',
+  // canActivate: [AuthGuard],
+  data: { preload: true },
+    loadChildren: 'app/users/user.module#UserModule'
+   },
   {path: 'welcome', component: WelcomeComponent},
   { path: 'nstbalanceinputs',
   // canActivate: [AuthGuardLogin],
@@ -21,11 +26,6 @@ const appRoutes: Routes = [
     canLoad: [AuthGuard]
   },
 
-    { path: 'users',
-    // canActivate: [AuthGuard],
-    data: { preload: true },
-      loadChildren: 'app/users/user.module#UserModule'
-     },
   {path: '', redirectTo: 'welcome', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];

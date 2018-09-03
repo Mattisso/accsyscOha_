@@ -61,7 +61,6 @@ import { ConfigComponent } from './config/config.component';
     BrowserModule.withServerTransition({ appId: 'ohada-account' }),
   HttpModule,
   HttpClientModule,
-  AppRoutingModule,
   ReactiveFormsModule,
   BrowserAnimationsModule,
   HttpClientXsrfModule.withOptions({
@@ -84,7 +83,7 @@ import { ConfigComponent } from './config/config.component';
     //  blacklistedRoutes: ['localhost:3000']
       }
     }),
-
+    AppRoutingModule
 // NstbalanceinputModule,
 // UserModule,
 // LoginRoutingModule,

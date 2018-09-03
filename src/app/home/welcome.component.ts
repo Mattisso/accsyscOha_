@@ -14,7 +14,7 @@ export class WelcomeComponent  implements OnInit {
     users: IUser[] = [];
     currentUser: IUser;
 
-    constructor(private userService: UserService) {
+    constructor(public userService: UserService) {
 
       this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     }

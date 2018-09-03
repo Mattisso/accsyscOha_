@@ -26,8 +26,8 @@ const httpOptions = {
 })
 export class NstbalanceinputService {
 
-  // private  API_URL = environment.apiUrl;
-  private balanceinput_Url = `api/nstbalanceinputs`; // environment.balanceinput_Url;
+  private  API_URL = environment.apiUrl;
+  private balanceinput_Url = `${this.API_URL}/api/nstbalanceinputs`; // environment.balanceinput_Url;
 
   private handleError: HandleError;
   balances: INstbalanceinput[] = [];
@@ -42,12 +42,10 @@ export class NstbalanceinputService {
   }
 
   getBalances(): Observable<INstbalanceinput[]> {
-    const headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json');
      const url = `${this.balanceinput_Url}`;
     return this.http.get<INstbalanceinput[]>(url, {responseType: 'json'}).pipe(
  //     of(new HttpResponse({status:200, body:body})),
- map(this.extractData),
+ // map(this.extractData),
       tap(data => `getBalances:   ${JSON.stringify(data)}`),
       catchError(this.handleError('getBalances', [])));
     //  .catch(this.handleError);
@@ -187,7 +185,7 @@ export class NstbalanceinputService {
     };
   }
 
-    private extractData(response: HttpResponse<INstbalanceinput[]>) {
+    private extractData(response: HttpResponse<INstbalanceinput>) {
       const body = response.body;
       return { observe: response }  || {};
     }

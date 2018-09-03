@@ -32,7 +32,7 @@ dotenv.load({ path: '.env' });
 const port = process.env.PORT || 4000;
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
- const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main');
+ const { AppServerModuleNgFactory, LAZY_MODULE_MAP } =  require(path.resolve(__dirname, './dist/server/main'));
 
 
 app.engine('html', ngExpressEngine(
@@ -47,7 +47,7 @@ app.set('views', path.join(DIST_FOLDER, 'browser'));
 // var setRoutes= require('./routes/api-routes');
 
 const setRoutes = require(path.join(__dirname, './src/server/routes/index'));
-const users = require(path.join(__dirname, './src/server/routes/users'));
+// const users = require(path.join(__dirname, './src/server/routes/users'));
 // --path.join(__dirname, '../client/index.html'));
 
 const  bodyParser = require('body-parser');
@@ -97,7 +97,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }));
 */
 app.use(setRoutes);
-app.use('/users', users);
+// app.use('/users', users);
 
 /*
 app.get('*', function (req, res) {

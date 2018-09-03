@@ -8,7 +8,6 @@ import { IUser } from '../user';
 import { MessageService } from '../../messages/message.service';
 
 import { HttpErrorHandler, HandleError } from '../../http-error.handler.service';
-import { ResponseType } from '../../../../node_modules/@angular/http';
 import { environment } from '../../../environments/environment';
 
 
@@ -21,18 +20,17 @@ const httpOptions = {
 };
 
 
-// const API_URL = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-
+  private  API_URL = environment.apiUrl;
   private handleError: HandleError;
 
- private baseUrl = 'users';
+ private userUrl =  `${this.API_URL}/api/users`;
 
-  constructor(  // private messageService: MessageService,
+  constructor(  // private messageService: MessageService,clear
      private http: HttpClient,
      private messageService: MessageService,
      httpErrorHandler: HttpErrorHandler) {
@@ -41,11 +39,11 @@ export class UserService {
      }
 
   getUsers(): Observable<IUser[]> {
-    const url = `${this.baseUrl}`;
+    const url = `${this.userUrl}`;
 
-    return this.http.get<IUser[]>(url, httpOptions).pipe(
+    return this.http.get<IUser[]>(url).pipe(
       // .map(this.extractData)
-  //    tap(data => console.log('getUsers: ' + JSON.stringify(data)))
+  tap(data => console.log('getUsers: ' + JSON.stringify(data))),
       catchError(this.handleError('getUsers', [])));
      // .catch(this.handleError);
   }
@@ -57,7 +55,7 @@ export class UserService {
    // const headers = new Headers({ 'Content-Type': 'application/json' });
    // const options = new RequestOptions({ headers: headers });
 
-    const url = `${this.baseUrl}/login`;
+    const url = `${this.userUrl}/login`;
     return this.http.post(url, credentials, httpOptions).pipe(
         //   .map(this.extractData)
      tap(data => console.log('getUser: ' + JSON.stringify(data))),
@@ -70,7 +68,7 @@ export class UserService {
 
   countUsers():  Observable<number> {
 
-    const url = `${this.baseUrl}/count`;
+    const url = `${this.userUrl}/count`;
     return this.http.get<number>(url).pipe(
   // .map(this.extractData)
  tap(data => this.log('getUser: ' + JSON.stringify(data))),
@@ -81,7 +79,7 @@ export class UserService {
     if (id === null) {
       return of(this.initializeIUser());
     }
-    const url = `${this.baseUrl}/${id}`;
+    const url = `${this.userUrl}/${id}`;
     return this.http.get<IUser>(url).pipe(
        // .map(this.extractData)
     tap(data => this.log('getUser: ' + JSON.stringify(data)),
@@ -95,7 +93,7 @@ export class UserService {
   //  const headers = new Headers({ 'Content-Type': 'application/json' });
  //   const options = new RequestOptions({ headers: headers });
  const id = typeof user === 'string' ? user : user.id;
-    const url = `${this.baseUrl}/${id}`;
+    const url = `${this.userUrl}/${id}`;
     return this.http.delete<IUser>(url, httpOptions).pipe(
     tap(data => this.log('deleteUser: ' + JSON.stringify(data))),
       catchError(this.handleError<IUser>(`deleteUser`))
@@ -117,7 +115,7 @@ export class UserService {
 
   private createUser(user: IUser): Observable<IUser> {
     user.id = undefined;
-    const url = `${this.baseUrl}/register`;
+    const url = `${this.userUrl}/register`;
     return this.http.post<IUser>(url, user, httpOptions).pipe(
        //     .map(this.extractData)
     tap(data => this.log('createUser: ' + JSON.stringify(data))),
@@ -131,7 +129,7 @@ export class UserService {
 
     httpOptions.headers =
     httpOptions.headers.set('Authorization', 'my-new-auth-token');
-    const url = `${this.baseUrl}/${user.id}`;
+    const url = `${this.userUrl}/${user.id}`;
     return this.http.put<IUser>(url, user, httpOptions).pipe(
       map(() => user),
     tap(data => this.log('updateUser: ' + JSON.stringify(data))),

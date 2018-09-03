@@ -3,9 +3,9 @@ const webpack = require('webpack');
 
 module.exports = {
 
-  entry: { server: './server.ts' },
+  entry: { server: path.resolve(__dirname,'src/main.ts')},
   resolve: { extensions: ['.js', '.ts'] },
-  target: 'node',
+  target: 'web',
   mode: 'none',
   optimization: {
     minimize: false
@@ -15,6 +15,7 @@ module.exports = {
   externals: [/node_modules/],
   output: {
     path: path.join(__dirname, 'dist'),
+    publicPath: '/',
     filename: '[name].js'
   },
   module: {

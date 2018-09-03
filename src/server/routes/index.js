@@ -25,13 +25,13 @@ routes.get('/', (req, res) => {
   return   nstbalanceinputsRoutes();
     //process each request nstbalanceinputsRoutes
     });*/
-
+routes.use('/api', userRouter);
 routes.use('/api',nstbalanceinputsRoutes);
 routes.use('/api',nsbalanceRouter);
 routes.use('/api',nttbalanceRouter);
 routes.use('/api',nttcomptebalanceRouter);
 routes.use('/api',nttcomptebalancedetailRouter);
-routes.use('/api', userRouter);
+
 //routes.use(nstbalanceinputsRoutes);
 
 module.exports = routes;
