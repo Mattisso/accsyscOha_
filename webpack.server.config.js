@@ -3,7 +3,10 @@ const webpack = require('webpack');
 
 module.exports = {
 
-  entry: { server: path.resolve(__dirname,'src/main.ts')},
+  entry: {
+    vendor: path.resolve(__dirname, 'src/vendor'),
+    server: path.resolve(__dirname,'src/main')
+  },
   resolve: { extensions: ['.js', '.ts'] },
   target: 'web',
   mode: 'none',
